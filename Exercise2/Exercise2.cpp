@@ -9,8 +9,8 @@ public:
 		x = 0;
 	}
 	virtual void input (){}
-	virtual float Luas(int a);
-	virtual float Keliling(int a);
+	virtual float Luas(int a) { return 0; }
+	virtual float Keliling(int a) { return 0; }
 	void setX(int a) {
 		this->x;
 	}
@@ -40,10 +40,20 @@ class bujursangkar : public bidangDatar {
 };
 
 int main() {
-	bidangDatar* Lingkaran;
-	Lingkaran a;
-	Keliling b;
+	bidangDatar* bentuk;
+		Lingkaran a;
+		bujursangkar b;
 
+		bentuk = &a;
+		bentuk->Luas();
+		bentuk = &b;
+		bentuk->Luas();
+
+
+		bentuk = &a;
+		bentuk->Keliling();
+		bentuk = &b;
+		bentuk->Keliling();
 
 		return 0;
 }
